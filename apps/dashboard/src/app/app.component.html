@@ -1,5 +1,7 @@
-<h1 class="dashboard-nav">Admin Dashboard</h1>
-<div *ngIf="isLoggedIn$ | async; else signIn">
-  You are authenticated so you can see this content.
-</div>
+<main *ngIf="isLoggedIn$ | async; else signIn" class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <h1 class="mt-10 text-center text-2xl font-bold text-gray-900 dark:text-gray-300">Admin Dashboard</h1>
+
+  <p class="mt-10 text-center dark:text-gray-300">You are authenticated so you can see this content.</p>
+</main>
+
 <ng-template #signIn><router-outlet></router-outlet></ng-template>
